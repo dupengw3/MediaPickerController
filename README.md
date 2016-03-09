@@ -23,6 +23,17 @@ By using this class, you won't ever have to worry about writing the aforemention
 
 
 
+## Usage
+
+You only have to worry about 4 simple things:
+
+- Initializing a `MediaPickerController` object.
+- Setting its `delegate` to be your `UIViewController` class.
+- Calling the `show()` method whenever you want to pick media.
+- Conforming to the `MediaPickerControllerDelegate` protocol and using the results within the methods it provides.
+
+
+
 ## Example
 
 Here's the `ViewController` class that comes as an example with the project:
@@ -66,12 +77,7 @@ extension ViewController: MediaPickerControllerDelegate {
 }
 ```
 
-As you can see, you only have to worry about 4 simple things:
 
-- Initializing a `MediaPickerController` object.
-- Setting its `delegate` to be your `UIViewController` class.
-- Calling the `show()` method whenever you want to pick media.
-- Conforming to the `MediaPickerControllerDelegate` protocol and using the results within the methods it provides.
 
 ## Setup
 
