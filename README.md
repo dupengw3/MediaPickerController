@@ -1,6 +1,6 @@
 # MediaPickerController
 
-Helper class that provides a neat API for presenting the classical action sheet for picking images or videos from the device or camera.
+Neat API for presenting the classical action sheet for picking an image or video from the device or camera.
 
 ------
 
