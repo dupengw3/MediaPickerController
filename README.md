@@ -4,6 +4,10 @@ Neat API for presenting the classical action sheet for picking an image or video
 
 ------
 
+![screenshot1](screenshots/screenshot1.png)
+
+
+
 ## Overview
 
 We know that presenting the famous action sheet for picking media is pretty common in most of iOS apps. However, achieving that functionality usually requires for you to write lots of boilerplate code, in which you're very likely to encounter awful things along the way (like  `kUTTypeImage` or `info[UIImagePickerControllerOriginalImage]`, just to mention).
