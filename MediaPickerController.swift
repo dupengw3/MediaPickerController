@@ -157,12 +157,12 @@ private extension MediaPickerController {
 	// MARK: - Constants
 	
 	struct Strings {
-		static let Title = NSLocalizedString("Adjuntar", comment: "Title for a generic action sheet for picking media from the device.")
-		static let ChoosePhoto = NSLocalizedString("Seleccionar de la galería", comment: "Text for an option that lets the user choose an existing photo in a generic action sheet for picking media from the device.")
-		static let ChoosePhotoOrVideo = NSLocalizedString("Seleccionar de la galería", comment: "Text for an option that lets the user choose an existing photo or video in a generic action sheet for picking media from the device.")
-		static let TakePhoto = NSLocalizedString("Tomar una foto", comment: "Text for an option that lets the user take a picture with the device camera in a generic action sheet for picking media from the device.")
-		static let TakeVideo = NSLocalizedString("Grabar un video", comment: "Text for an option that lets the user take a video with the device camera in a generic action sheet for picking media from the device.")
-		static let Cancel = NSLocalizedString("Cancelar", comment: "Text for the 'cancel' action in a generic action sheet for picking media from the device.")
+		static let Title = NSLocalizedString("Attach", comment: "Title for a generic action sheet for picking media from the device.")
+		static let ChoosePhoto = NSLocalizedString("Choose existing photo", comment: "Text for an option that lets the user choose an existing photo in a generic action sheet for picking media from the device.")
+		static let ChoosePhotoOrVideo = NSLocalizedString("Choose existing photo or video", comment: "Text for an option that lets the user choose an existing photo or video in a generic action sheet for picking media from the device.")
+		static let TakePhoto = NSLocalizedString("Take a photo", comment: "Text for an option that lets the user take a picture with the device camera in a generic action sheet for picking media from the device.")
+		static let TakeVideo = NSLocalizedString("Take a video", comment: "Text for an option that lets the user take a video with the device camera in a generic action sheet for picking media from the device.")
+		static let Cancel = NSLocalizedString("Cancel", comment: "Text for the 'cancel' action in a generic action sheet for picking media from the device.")
 	}
 	
 }
