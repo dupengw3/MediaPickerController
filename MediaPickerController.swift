@@ -17,7 +17,7 @@ enum MediaPickerControllerType {
 
 @objc protocol MediaPickerControllerDelegate {
 	optional func mediaPickerControllerDidPickImage(image: UIImage)
-	optional func mediaPickerControllerDidPickVideoWithURL(url: NSURL, imageData: NSData, thumbnail: UIImage)
+	optional func mediaPickerControllerDidPickVideoWithURL(url: NSURL, videoData: NSData, thumbnail: UIImage)
 }
 
 class MediaPickerController: NSObject {
@@ -62,10 +62,10 @@ extension MediaPickerController: UIImagePickerControllerDelegate, UINavigationCo
 		} else if mediaType.isEqualToString(kUTTypeMovie as NSString as String) {
 			// Is Video
 			let url: NSURL = info[UIImagePickerControllerMediaURL] as! NSURL
-			let chosenImage = info[UIImagePickerControllerMediaURL] as! NSURL
-			let imageData = try! NSData(contentsOfURL: chosenImage, options: [])
+			let chosenVideo = info[UIImagePickerControllerMediaURL] as! NSURL
+			let videoData = try! NSData(contentsOfURL: chosenVideo, options: [])
 			let thumbnail = url.generateThumbnail()
-			self.delegate?.mediaPickerControllerDidPickVideoWithURL?(url, imageData: imageData, thumbnail: thumbnail)
+			self.delegate?.mediaPickerControllerDidPickVideoWithURL?(url, videoData: videoData, thumbnail: thumbnail)
 		}
 		
 	}

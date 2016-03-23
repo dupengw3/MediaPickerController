@@ -38,7 +38,7 @@ extension ViewController: MediaPickerControllerDelegate {
         self.imageView.image = image
     }
     
-    func mediaPickerControllerDidPickVideoWithURL(url: NSURL, imageData: NSData, thumbnail: UIImage) {
+    func mediaPickerControllerDidPickVideoWithURL(url: NSURL, videoData: NSData, thumbnail: UIImage) {
         self.statusLabel.text = "Picked Video\nURL in device: \(url.absoluteString)\nThumbnail Preview:"
         self.imageView.image = thumbnail
     }
