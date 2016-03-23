@@ -129,8 +129,7 @@ private extension MediaPickerController {
 	
 	func addCancelActionToSheet(actionSheet: UIAlertController) {
 		let cancel = Strings.Cancel
-		let cancelAction = UIAlertAction(title: cancel, style: UIAlertActionStyle.Cancel) { (_) -> Void in
-		}
+		let cancelAction = UIAlertAction(title: cancel, style: UIAlertActionStyle.Cancel, handler: nil)
 		actionSheet.addAction(cancelAction)
 	}
 	
