@@ -10,23 +10,23 @@ import UIKit
 import AVFoundation
 import MobileCoreServices
 
-enum MediaPickerControllerType {
+public enum MediaPickerControllerType {
 	case ImageOnly
 	case ImageAndVideo
 }
 
-@objc protocol MediaPickerControllerDelegate {
+@objc public protocol MediaPickerControllerDelegate {
 	optional func mediaPickerControllerDidPickImage(image: UIImage)
 	optional func mediaPickerControllerDidPickVideoWithURL(url: NSURL, videoData: NSData, thumbnail: UIImage)
 }
 
-class MediaPickerController: NSObject {
+public class MediaPickerController: NSObject {
 	
 	// MARK: - Public
 	
-	weak var delegate: MediaPickerControllerDelegate?
+	public weak var delegate: MediaPickerControllerDelegate?
 	
-	init (type: MediaPickerControllerType, presentingViewController controller: UIViewController) {
+	public init(type: MediaPickerControllerType, presentingViewController controller: UIViewController) {
 		self.type = type
 		self.presentingController = controller
 		self.mediaPicker = UIImagePickerController()
@@ -34,7 +34,7 @@ class MediaPickerController: NSObject {
 		self.mediaPicker.delegate = self
 	}
 	
-	func show() {
+	public func show() {
 		let actionSheet = self.optionsActionSheet
 		self.presentingController.presentViewController(actionSheet, animated: true, completion: nil)
 	}
@@ -51,7 +51,7 @@ extension MediaPickerController: UIImagePickerControllerDelegate, UINavigationCo
 	
 	// MARK: - UIImagePickerControllerDelegate
 	
-	func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+	public func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
 		self.dismiss()
 		let mediaType = info[UIImagePickerControllerMediaType] as! NSString
 		
@@ -70,13 +70,13 @@ extension MediaPickerController: UIImagePickerControllerDelegate, UINavigationCo
 		
 	}
 	
-	func imagePickerControllerDidCancel(picker: UIImagePickerController) {
+	public func imagePickerControllerDidCancel(picker: UIImagePickerController) {
 		self.dismiss()
 	}
 	
 	// MARK: - UINavigationControllerDelegate
 	
-	func navigationController(navigationController: UINavigationController, willShowViewController viewController: UIViewController, animated: Bool) {
+	public func navigationController(navigationController: UINavigationController, willShowViewController viewController: UIViewController, animated: Bool) {
 		UIApplication.sharedApplication().statusBarStyle = .LightContent
 	}
 	
