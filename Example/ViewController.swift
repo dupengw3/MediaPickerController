@@ -19,13 +19,13 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.mediaPickerController = MediaPickerController(type: .ImageAndVideo, presentingViewController: self)
+        self.mediaPickerController = MediaPickerController(type: .imageAndVideo, presentingViewController: self)
         self.mediaPickerController.delegate = self
     }
     
     // MARK: - IBAction
 
-    @IBAction func pickMedia(sender: UIBarButtonItem) {
+    @IBAction func pickMedia(_ sender: UIBarButtonItem) {
         self.mediaPickerController.show()
     }
 
@@ -33,12 +33,12 @@ class ViewController: UIViewController {
 
 extension ViewController: MediaPickerControllerDelegate {
     
-    func mediaPickerControllerDidPickImage(image: UIImage) {
+    func mediaPickerControllerDidPickImage(_ image: UIImage) {
         self.statusLabel.text = "Picked Image\nPreview:"
         self.imageView.image = image
     }
     
-    func mediaPickerControllerDidPickVideoWithURL(url: NSURL, videoData: NSData, thumbnail: UIImage) {
+    func mediaPickerControllerDidPickVideo(url: URL, data: Data, thumbnail: UIImage) {
         self.statusLabel.text = "Picked Video\nURL in device: \(url.absoluteString)\nThumbnail Preview:"
         self.imageView.image = thumbnail
     }
