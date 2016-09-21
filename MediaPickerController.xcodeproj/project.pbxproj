@@ -12,7 +12,6 @@
 		51C70AA51C90BD680050D874 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51C70A9D1C90BD680050D874 /* Assets.xcassets */; };
 		51C70AA61C90BD680050D874 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51C70A9E1C90BD680050D874 /* LaunchScreen.storyboard */; };
 		51C70AA71C90BD680050D874 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51C70AA01C90BD680050D874 /* Main.storyboard */; };
-		51C70AA81C90BD680050D874 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 51C70AA21C90BD680050D874 /* Info.plist */; };
 		51C70AA91C90BD680050D874 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C70AA31C90BD680050D874 /* ViewController.swift */; };
 		51F65DCC1C90BBCD00E604C0 /* MediaPickerControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F65DCB1C90BBCD00E604C0 /* MediaPickerControllerTests.swift */; };
 /* End PBXBuildFile section */
@@ -153,7 +152,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 0720;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = Inaka;
 				TargetAttributes = {
 					51F65DB21C90BBCC00E604C0 = {
@@ -191,7 +190,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				51C70AA81C90BD680050D874 /* Info.plist in Resources */,
 				51C70AA71C90BD680050D874 /* Main.storyboard in Resources */,
 				51C70AA51C90BD680050D874 /* Assets.xcassets in Resources */,
 				51C70AA61C90BD680050D874 /* LaunchScreen.storyboard in Resources */,
@@ -269,8 +267,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -314,8 +314,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -334,6 +336,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
